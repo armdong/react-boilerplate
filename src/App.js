@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from "react-hot-loader/root";
 
 class App extends React.Component {
   state = {
@@ -16,8 +17,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello World!</h1>
-        <h2>Count: {this.state.count}</h2>
+        <h1>Hello World!!!</h1>
+        <h2 className={this.state.count > 5 ? "warning" : null}>
+          Count: {this.state.count}
+        </h2>
         <button onClick={this.handleIncrement}>Increment</button>
         <button onClick={this.handleDecrement}>Decrement</button>
       </div>
@@ -25,4 +28,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default hot(App);
