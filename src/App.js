@@ -17,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello World!!!</h1>
+        <h1>Hello World!</h1>
         <h2 className={this.state.count > 5 ? "warning" : null}>
           Count: {this.state.count}
         </h2>
